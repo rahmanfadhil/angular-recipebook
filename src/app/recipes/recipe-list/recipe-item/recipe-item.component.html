@@ -1,0 +1,9 @@
+<a [routerLink]="[id]" style="cursor: pointer;" routerLinkActive="active" class="list-group-item list-group-item-action">
+  <div class="media">
+    <img class="mr-3" [src]="recipe.imagePath" width="64" alt="Generic placeholder image">
+    <div class="media-body my-auto">
+      <h5 class="mt-0">{{ recipe.name }}</h5>
+      {{ recipe.description }}
+    </div>
+  </div>
+</a>
