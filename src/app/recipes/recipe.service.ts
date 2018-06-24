@@ -62,4 +62,9 @@ export class RecipeService {
     this.recipes[index] = recipe
     this.recipeChanged.emit(this.recipes.slice())
   }
+
+  deleteRecipe(index: number) {
+    this.recipes.splice(index, 1)
+    this.recipeChanged.emit(this.recipes.slice())
+  }
 }

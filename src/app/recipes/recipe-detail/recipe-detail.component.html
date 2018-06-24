@@ -10,7 +10,7 @@
     <div class="d-flex justify-content-between mt-3">
       <button class="btn btn-success" (click)="addToShoppingList()">To shopping list</button>
       <button class="btn btn-warning" routerLink="edit">Edit Recipe</button>
-      <button class="btn btn-danger">Delete Recipe</button>
+      <button class="btn btn-danger" (click)="onDelete()">Delete Recipe</button>
     </div>
   </div>
   <div class="col-md-4">

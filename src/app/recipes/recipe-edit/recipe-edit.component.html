@@ -17,8 +17,9 @@
         type="text"
         class="form-control"
         formControlName="imagePath"
+        #imagePath
         id="imagePath">
-        <!-- <img src="" alt="image" class="img-responsive mt-2"> -->
+        <img [src]="imagePath.value" alt="image" class="img-responsive mt-2">
     </div>
   </div>
   <div class="form-group row">
@@ -42,7 +43,7 @@
           <input type="text" class="form-control mr-2" formControlName="name">
           <input type="number" class="form-control" formControlName="amount">
         </div>
-        <button type="button" class="btn btn-danger">X</button>
+        <button type="button" class="btn btn-danger" (click)="onDeleteIngredient(i)")>X</button>
       </div>
       <div class="text-right">
         <button type="button" class="btn btn-success" (click)="onAddIngredient()">Add Ingredients</button>
@@ -51,6 +52,6 @@
   </div>
   <div class="form-group">
     <button type="submit" class="btn btn-success" [disabled]="!recipeForm.valid">Save</button>
-    <button type="button" class="btn btn-danger ml-2">Cancel</button>
+    <button type="button" class="btn btn-danger ml-2" (click)="onCancel()">Cancel</button>
   </div>
 </form>
